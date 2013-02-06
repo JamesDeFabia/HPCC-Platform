@@ -12,7 +12,7 @@
     </mediaobject>
 
     <author>
-      <surname><emphasis role="redbold">DRAFT 004</emphasis> Boca Raton
+      <surname><emphasis role="redbold">DRAFT 006</emphasis> Boca Raton
       Documentation Team</surname>
     </author>
 
@@ -32,7 +32,7 @@
       used in this manual are fictitious. Any similarity to actual persons,
       living or dead, is purely coincidental.</para>
 
-      <para><emphasis role="redbold">DRAFT 004</emphasis></para>
+      <para><emphasis role="redbold">DRAFT 006</emphasis></para>
     </legalnotice>
 
     <xi:include href="common/Version.xml" xpointer="FooterInfo"
@@ -213,7 +213,7 @@
     <!-- add screen shot***-->
 
     <sect1 id="Used_to_Build_Queries" role="nobrk">
-      <title>Getting Eclipse Indigo</title>
+      <title>Getting Eclipse Indigo or Juno</title>
 
       <para>Download the Eclipse IDE from the site:</para>
 
@@ -300,8 +300,6 @@
                 <mediaobject>
                   <imageobject>
                     <imagedata fileref="images/EPI004.jpg" />
-
-                    <!--This screen should show completed Location in the future-->
                   </imageobject>
                 </mediaobject>
               </figure></para>
@@ -364,10 +362,9 @@
           </listitem>
 
           <listitem>
-            <para>From the Workbench File menu, select <emphasis
-            role="bold">File <emphasis role="bold">&gt;&gt;</emphasis> New
-            <emphasis role="bold">&gt;&gt;</emphasis> Project…
-            </emphasis></para>
+            <para>From the menu, select <emphasis role="bold">File <emphasis
+            role="bold">&gt;&gt;</emphasis> New <emphasis
+            role="bold">&gt;&gt;</emphasis> Project… </emphasis></para>
 
             <para>This launches a <emphasis role="bold">New Project</emphasis>
             window which prompts you to Select a wizard</para>
@@ -505,9 +502,10 @@
         <orderedlist>
           <listitem>
             <para>Expand your project (hello_world), then rt-click on
-            hello.ecl, and select <emphasis role="bold">Run As</emphasis>
-            <emphasis role="bold">&gt;&gt;</emphasis> <emphasis
-            role="bold">Run Configurations…</emphasis></para>
+            <emphasis>hello.ecl</emphasis>, and select <emphasis
+            role="bold">Run As</emphasis> <emphasis
+            role="bold">&gt;&gt;</emphasis> <emphasis role="bold">Run
+            Configurations…</emphasis></para>
 
             <para><graphic fileref="images/EPI011.jpg" scale="80" /></para>
           </listitem>
@@ -635,9 +633,17 @@
       <sect2>
         <title>Execute your ECL Code Locally.</title>
 
-        <para><emphasis role="bold">NOTE: </emphasis>Compiling and executing
-        ECL code locally requires Visual Studio 2008 for Windows or GCC on
-        Linux. You do not need these if you are targeting a server.</para>
+        <variablelist>
+          <varlistentry>
+            <term>Note:</term>
+
+            <listitem>
+              <para>Compiling and executing ECL code locally requires Visual
+              Studio 2008 for Windows or GCC on Linux. You do not need these
+              if you are targeting a server.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
 
         <orderedlist>
           <listitem>
