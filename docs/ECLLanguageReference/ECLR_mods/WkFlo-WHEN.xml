@@ -64,6 +64,7 @@
   <para>Example:</para>
 
   <programlisting>  IF (FileServices.FileExists('test::myfile'),
+//comment
      FileServices.DeleteLogicalFile('test::myfile'));
      //deletes the file if it already exists
   FileServices.MonitorLogicalFileName('MyFileEvent','test::myfile');
@@ -91,5 +92,7 @@
   BUILD(oldies) : WHEN(EVENT('FileDropped', 'x'));
 </programlisting>
 
-  <para>See Also: <link linkend="EVENT">EVENT</link>, <link linkend="CRON">CRON</link>, <link linkend="NOTIFY">NOTIFY</link>, <link linkend="WAIT">WAIT</link></para>
+  <para>See Also: <link linkend="EVENT">EVENT</link>, <link
+  linkend="CRON">CRON</link>, <link linkend="NOTIFY">NOTIFY</link>, <link
+  linkend="WAIT">WAIT</link></para>
 </sect1>
