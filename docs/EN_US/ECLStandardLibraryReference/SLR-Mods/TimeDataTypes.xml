@@ -72,7 +72,7 @@
           <entry><emphasis role="bold">Timestamp_t </emphasis></entry>
 
           <entry>An INTEGER8 holding a number of microseconds. Can be used to
-          represent // either a duration or the number of microseconds since
+          represent either a duration or the number of microseconds since
           epoch (Jan 1, 1970).</entry>
         </row>
       </tbody>

@@ -411,6 +411,12 @@
     <xi:include href="ECLStandardLibraryReference/SLR-Mods/TimeFromParts.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude" />
 
+    <xi:include href="ECLStandardLibraryReference/SLR-Mods/SecondsFromParts.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+    <xi:include href="ECLStandardLibraryReference/SLR-Mods/SecondsToParts.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude" />
+
     <xi:include href="ECLStandardLibraryReference/SLR-Mods/IsLeapYear.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude" />
 

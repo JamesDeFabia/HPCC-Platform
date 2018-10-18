@@ -81,6 +81,6 @@ EXPORT Date_t := UNSIGNED4;
 EXPORT Days_t := UNSIGNED4;
 </programlisting>
 
-  <para>See Also: <link linkend="Date_Data_Types">Time Data
+  <para>See Also: <link linkend="Time_Data_Types">Time Data
   Types</link></para>
 </sect1>

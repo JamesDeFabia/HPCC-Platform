@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<sect1 id="SecondsFromParts">
+  <title>SecondsFromParts</title>
+
+  <para><emphasis role="bold">STD.Date.SecondsFromParts<indexterm>
+      <primary>STD.Date.SecondsFromParts</primary>
+    </indexterm><indexterm>
+      <primary>Date.SecondsFromParts</primary>
+    </indexterm><indexterm>
+      <primary>SecondsFromParts</primary>
+    </indexterm>(</emphasis> <emphasis>year, month, day, hour, minute, second,
+  is_local_time</emphasis> <emphasis role="bold">)</emphasis></para>
+
+  <informaltable colsep="1" frame="all" rowsep="1">
+    <tgroup cols="2">
+      <colspec colwidth="80.50pt" />
+
+      <colspec />
+
+      <tbody>
+        <row>
+          <entry><emphasis>year</emphasis></entry>
+
+          <entry>An INTEGER2 year between 1601-30827</entry>
+        </row>
+
+        <row>
+          <entry><emphasis>month</emphasis></entry>
+
+          <entry>An INTEGER1 month value in the range 1 to 12.</entry>
+        </row>
+
+        <row>
+          <entry><emphasis>day</emphasis></entry>
+
+          <entry>An INTEGER1 day value in the range 1 to 31.</entry>
+        </row>
+
+        <row>
+          <entry><emphasis>hour</emphasis></entry>
+
+          <entry>An INTEGER1 hour value in the range 0 to 23.</entry>
+        </row>
+
+        <row>
+          <entry><emphasis>minute</emphasis></entry>
+
+          <entry>An UNSIGNED1 minute value in the range 0 to 59.</entry>
+        </row>
+
+        <row>
+          <entry><emphasis>second</emphasis></entry>
+
+          <entry>An UNSIGNED1 second value in the range 0 to 59.</entry>
+        </row>
+
+        <row>
+          <entry><emphasis>is_local_time</emphasis></entry>
+
+          <entry>A BOOLEAN value to indicate if the time is local or UTC. Set
+          to TRUE if the date/time components are expressed in local time
+          rather than UTC, Set to FALSE if the components are expressed in
+          UTC. Optional, defaults to FALSE.</entry>
+        </row>
+
+        <row>
+          <entry>Return:</entry>
+
+          <entry>SecondsFromParts returns a Seconds_t (An INTEGER8 holding the
+          number of seconds created by combining the fields.)</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+  <para>The <emphasis role="bold">SecondsFromParts</emphasis> function
+  combines the date and time components to create a Seconds_t type. The date
+  must be represented within the Gregorian calendar after the year
+  1600.</para>
+
+  <para>Example:</para>
+
+  <programlisting format="linespecific">IMPORT STD;
+  INTEGER2  MyYear  := 1963;  
+  UNSIGNED1 MyMonth := 11;   
+  UNSIGNED1 MyDay   := 22;
+  INTEGER1  MyHour   := 13;
+  UNSIGNED1 MyMinute := 30;
+  UNSIGNED1 MySecond := 02;
+  BOOLEAN   is_local_time := TRUE;
+S := STD.Date.SecondsFromParts(MyYear, MyMonth, MyDay, MyHour, MyMinute, MySecond); </programlisting>
+
+  <para>See Also: <link linkend="Date_Data_Types">Date Data Types</link>,
+  <link linkend="Time_Data_Types">Time Data Types</link></para>
+</sect1>

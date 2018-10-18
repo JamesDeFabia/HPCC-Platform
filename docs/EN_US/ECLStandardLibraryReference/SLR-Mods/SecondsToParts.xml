@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<sect1 id="SecondsToParts">
+  <title>SecondsToParts</title>
+
+  <para><emphasis role="bold">STD.Date.SecondsToParts<indexterm>
+      <primary>STD.Date.SecondsToParts</primary>
+    </indexterm><indexterm>
+      <primary>Date.SecondsToParts</primary>
+    </indexterm><indexterm>
+      <primary>SecondsToParts</primary>
+    </indexterm>(</emphasis> <emphasis>seconds, is_local_time</emphasis>
+  <emphasis role="bold">)</emphasis></para>
+
+  <informaltable colsep="1" frame="all" rowsep="1">
+    <tgroup cols="2">
+      <colspec colwidth="80.50pt" />
+
+      <colspec />
+
+      <tbody>
+        <row>
+          <entry><emphasis>seconds</emphasis></entry>
+
+          <entry>An INTEGER8 (Seconds_t) containing the number of seconds
+          since epoch. </entry>
+        </row>
+
+        <row>
+          <entry><emphasis>is_local_time</emphasis></entry>
+
+          <entry>A BOOLEAN value to indicate if the time is local or UTC. Set
+          to TRUE if the date/time components are expressed in local time
+          rather than UTC, Set to FALSE if the components are expressed in
+          UTC. Optional, defaults to FALSE.</entry>
+        </row>
+
+        <row>
+          <entry>Return:</entry>
+
+          <entry>SecondsToParts returns a structure containing date and time
+          parts. (Date_t and Time_t)</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+  <para>The <emphasis role="bold">SecondsToParts</emphasis> function converts
+  the number of seconds since epoch to a structure containing date and time
+  parts. The result must be representable within the Gregorian calendar after
+  the year 1600.</para>
+
+  <para>Example:</para>
+
+  <programlisting format="linespecific">IMPORT STD;
+  INTEGER8 MySeconds := -192796198;
+  BOOLEAN   is_local_time := TRUE;
+Y := STD.Date.SecondsToParts(MySeconds,TRUE).Year; 
+M := STD.Date.SecondsToParts(MySeconds,TRUE).Month;
+D := STD.Date.SecondsToParts(MySeconds,TRUE).Day;
+OUTPUT(M + '/' + D + '/' + Y); // 11/22/1963</programlisting>
+
+  <para>See Also: <link linkend="Date_Data_Types">Date Data Types</link>,
+  <link linkend="Time_Data_Types">Time Data Types</link></para>
+</sect1>
