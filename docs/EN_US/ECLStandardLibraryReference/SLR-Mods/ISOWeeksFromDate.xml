@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<sect1 id="ISOWeeksFromDate">
+  <title>ISOWeeksFromDate</title>
+
+  <para><emphasis role="bold">STD.Date.ISOWeeksFromDate<indexterm>
+      <primary>STD.Date.ISOWeeksFromDate</primary>
+    </indexterm><indexterm>
+      <primary>Date.ISOWeeksFromDate</primary>
+    </indexterm><indexterm>
+      <primary>ISOWeeksFromDate</primary>
+    </indexterm>(</emphasis> <emphasis>date</emphasis> <emphasis
+  role="bold">)</emphasis></para>
+
+  <informaltable colsep="1" frame="all" rowsep="1">
+    <tgroup cols="2">
+      <colspec colwidth="80.50pt" />
+
+      <colspec />
+
+      <tbody>
+        <row>
+          <entry><emphasis>date</emphasis></entry>
+
+          <entry>The date (in Date_t format) for which to determine the number
+          of weeks in the year</entry>
+        </row>
+
+        <row>
+          <entry>Return:</entry>
+
+          <entry>A INTEGER value of 52 for short years or 53 for long
+          years.</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+  <para>The <emphasis role="bold">ISOWeeksFromDate</emphasis> function returns
+  the number of weeks for the year from a date.</para>
+
+  <para>Example:</para>
+
+  <programlisting format="linespecific">IMPORT STD;
+STD.Date.ISOWeeksFromDate(20110101); // returns 52
+STD.Date.ISOWeeksFromDate(20200101); // returns 53</programlisting>
+
+  <para></para>
+</sect1>

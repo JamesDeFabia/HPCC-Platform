@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<sect1 id="ISODayOfWeekFromDate">
+  <title>ISODayOfWeekFromDate</title>
+
+  <para><emphasis role="bold">STD.Date.ISODayOfWeekFromDate<indexterm>
+      <primary>STD.Date.ISODayOfWeekFromDate</primary>
+    </indexterm><indexterm>
+      <primary>Date.ISODayOfWeekFromDate</primary>
+    </indexterm><indexterm>
+      <primary>ISODayOfWeekFromDate</primary>
+    </indexterm>(</emphasis> <emphasis>date</emphasis> <emphasis
+  role="bold">)</emphasis></para>
+
+  <informaltable colsep="1" frame="all" rowsep="1">
+    <tgroup cols="2">
+      <colspec colwidth="80.50pt" />
+
+      <colspec />
+
+      <tbody>
+        <row>
+          <entry><emphasis>date</emphasis></entry>
+
+          <entry>The date (in Date_t format) for which to determine the day of
+          week. </entry>
+        </row>
+
+        <row>
+          <entry>Return:</entry>
+
+          <entry>A INTEGER value in the range 1 to 7 representing the day of
+          the week, where 1 = Monday.</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+  <para>The <emphasis role="bold">ISODayOfWeekFromDate</emphasis> function
+  returns an INTEGER representing the day of the week indicated by the given
+  date in ISO-8601. The date must be in the Gregorian calendar after the year
+  1600.</para>
+
+  <para>Example:</para>
+
+  <programlisting format="linespecific">IMPORT STD;
+STD.Date.ISODayOfWeekFromDate(20140130); // returns 4 (indicating Thursday)</programlisting>
+
+  <para></para>
+</sect1>
