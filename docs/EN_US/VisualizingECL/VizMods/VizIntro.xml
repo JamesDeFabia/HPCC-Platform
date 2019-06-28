@@ -29,8 +29,8 @@
   <sect1 id="VizInstall">
     <title>Installation</title>
 
-    <para>To install the Visualization bundle, use the ecl command line
-    interface.</para>
+    <para>To install the Visualization bundle, use the <emphasis
+    role="bold">ecl</emphasis> command line interface.</para>
 
     <para></para>
 

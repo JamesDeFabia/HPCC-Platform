@@ -647,12 +647,23 @@
               <entry>For Roxie queries. When true, generates a unique GlobalId
               if one is not provided.</entry>
             </row>
+
+            <row>
+              <entry><emphasis>analyzeWorkunit</emphasis></entry>
+
+              <entry></entry>
+
+              <entry>Overrides the setting in ECL Agent to analyze workunits
+              after ECL queries are executed (Thor only). This allows a
+              workunit to be further analyzed to identify any potential
+              issues. Possible issues display in ECL Watch's Warnings &amp;
+              Errors area. The global setting defaults to TRUE, but can be
+              changed using Configuration Manager.</entry>
+            </row>
           </tbody>
         </tgroup>
-      </informaltable></para>
-
-    <para><emphasis role="bold">The following options are all about generating
-    Logical graphs in a workunit. </emphasis></para>
+      </informaltable><emphasis role="bold">The following options are all
+    about generating Logical graphs in a workunit. </emphasis></para>
 
     <para>Logical graphs<indexterm>
         <primary>Logical graphs</primary>
