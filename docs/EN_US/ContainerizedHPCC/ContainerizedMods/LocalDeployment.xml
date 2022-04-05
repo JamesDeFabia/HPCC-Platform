@@ -16,7 +16,7 @@
   </sect1>
 
   <sect1 id="addrepo" role="nobrk">
-    <title>Add a repository</title>
+    <title>Add a Repository</title>
 
     <para>To use the HPCC Systems helm chart, you must add it to the helm
     repository list, as shown below:</para>
