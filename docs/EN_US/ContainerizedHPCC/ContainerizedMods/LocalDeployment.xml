@@ -37,7 +37,7 @@
   </sect1>
 
   <sect1 id="startdefault">
-    <title>Start a default system</title>
+    <title>Start a Default System</title>
 
     <para>The default helm chart starts a simple test system with Dali, ESP,
     eclccserver, two eclagent queues (ROXIE and hThor mode), and one Thor
