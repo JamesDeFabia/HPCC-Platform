@@ -37,7 +37,7 @@
             <entry><emphasis>httpmethod</emphasis></entry>
 
             <entry>A string containing the HTTP Method to invoke. Valid
-            methods are: "GET"</entry>
+            methods are: "GET" and "POST"</entry>
           </row>
 
           <row>
@@ -151,13 +151,13 @@
 
             <entry>Specifies header information to be passed to the service.
             HTTPCALL supports multiple instances of the HTTPHEADER option if
-            you need to specify multiple key/value header strings. </entry>
+            you need to specify multiple key/value header strings.</entry>
           </row>
         </tbody>
       </tgroup>
     </informaltable></para>
 
-  <para>Example:</para>
+  <para>Examples:</para>
 
   <programlisting>worldBankSource := RECORD
   STRING name {XPATH('name')}
@@ -176,5 +176,32 @@ raw2 := HTTPCALL('http://api.worldbank.org/sources', 'GET', 'text/xml',
                  OutRec1, HTTPHEADER('Authorization','Basic dXNlcm5hbWU6cGFzc3dvcmQ='),
                           HTTPHEADER('MyLiteral','FOO'));
 
-OUTPUT(raw2);</programlisting>
+OUTPUT(raw2);
+
+
+// POST Example
+
+sendContent := RECORD
+  STRING name {XPATH('name')} := 'bob';
+  STRING salary {XPATH('salary')} := '22';
+  STRING age {XPATH('age')} := '105';
+END;
+
+receiveContent := RECORD
+  STRING name {XPATH('name')};
+  STRING salary {XPATH('salary')};
+  STRING age {XPATH('age')};
+  INTEGER4 id {XPATH('id')};
+END;
+
+receiveRec := RECORD
+  STRING status {XPATH('status')};
+  receiveContent content {XPATH('data')};
+END;
+
+OUTPUT(HTTPCALL('https://dummy.restapiexample.com/api/v1/create', 'POST', 
+                sendContent, DATASET(receiveRec), JSON, LOG));
+</programlisting>
+
+  <para></para>
 </sect1>

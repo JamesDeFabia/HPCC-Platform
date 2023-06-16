@@ -530,7 +530,9 @@ SOAPCALL( 'https://127.0.0.1:8022/','MyModule.SomeService',
 SOAPCALL( InputDataset,'https://127.0.0.1:8022/','MyModule.SomeService',{STRING500 InData});
 </programlisting>
 
-    <para>See Also: <link linkend="RECORD_Structure">RECORD Structure</link>,
-    <link linkend="TRANSFORM_Structure">TRANSFORM Structure</link></para>
+    <para>See Also: <link linkend="RECORD_Structure">HTTPCALL </link>,<link
+    linkend="RECORD_Structure"></link><link linkend="RECORD_Structure">RECORD
+    Structure</link>, <link linkend="TRANSFORM_Structure">TRANSFORM
+    Structure</link></para>
   </sect2>
 </sect1>
