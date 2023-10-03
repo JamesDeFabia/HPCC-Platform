@@ -165,6 +165,13 @@
                 <entry>returns a list of all the key user IDs that can be used
                 by the sign command.</entry>
               </row>
+
+              <row>
+                <entry>url-secret-name</entry>
+
+                <entry>generate a secret name from a URL for automatic URL
+                mapping</entry>
+              </row>
             </tbody>
           </tgroup>
         </informaltable>
