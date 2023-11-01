@@ -511,6 +511,14 @@
 
     <xi:include href="ECLStandardLibraryReference/SLR-Mods/ToUTCTime.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude" />
+				
+      <!-- insert ISO functions here -->
+    <xi:include href="ECLStandardLibraryReference/SLR-Mods/ISODayOfWeekFromDate.xml" 
+	            xmlns:xi="http://www.w3.org/2001/XInclude" />
+				
+    <xi:include href="ECLStandardLibraryReference/SLR-Mods/ISOIsLongYear.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude" />
+				
 
     <xi:include href="ECLStandardLibraryReference/SLR-Mods/AppendTZOffset.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude" />
