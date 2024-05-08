@@ -61,7 +61,7 @@
 
     <para>The syntax and many of the compiler options implemented are similar
     to the gcc compiler. You can execute either the Linux or Windows version
-    of eclcc, which, when run, load several of our shared objects (SO files,
+    of eclcc, which, when run, loads several of our shared objects (SO files,
     on Linux) or DLLs (on Windows). The ECL Compiler can process hThor, Thor,
     or Roxie targeted ECL code.</para>
 
