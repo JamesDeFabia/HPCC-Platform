@@ -21,7 +21,7 @@ export class IconBarWidget extends IconBar {
             buttons.unshift(
                 new Button().faChar("fa-play").tooltip("Open ECL in Playground")
                     .on("click", () => {
-                        window.open(`https://play.hpccsystems.com:18010/esp/files/index.html#/play?ecl=${encodeURI(text)}`, "_blank");
+                        window.open(`http://localhost:8010/esp/files/index.html#/play?ecl=${encodeURI(text)}`, "_blank");
                     })
             );
         }
