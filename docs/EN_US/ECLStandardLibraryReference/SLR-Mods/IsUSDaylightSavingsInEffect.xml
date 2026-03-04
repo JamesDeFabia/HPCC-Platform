@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<sect1 id="IsUSDaylightSavingsInEffect">
+  <title>IsUSDaylightSavingsInEffect</title>
+
+  <para><emphasis role="bold">STD.Date.IsUSDaylightSavingsInEffect<indexterm>
+      <primary>STD.Date.IsUSDaylightSavingsInEffect</primary>
+    </indexterm><indexterm>
+      <primary>Date.IsUSDaylightSavingsInEffect</primary>
+    </indexterm><indexterm>
+      <primary>IsUSDaylightSavingsInEffect</primary>
+    </indexterm>(</emphasis> <emphasis>date</emphasis> <emphasis
+  role="bold">)</emphasis></para>
+
+  <informaltable colsep="1" frame="all" rowsep="1">
+    <tgroup cols="2">
+      <colspec colwidth="80.50pt"/>
+
+      <colspec/>
+
+      <tbody>
+        <row>
+          <entry><emphasis>date</emphasis></entry>
+
+          <entry>A date value in the Date_t format (An UNSIGNED4 containing a
+          date value in YYYYMMDD format.)</entry>
+        </row>
+
+        <row>
+          <entry>Return:</entry>
+
+          <entry>IsUSDaylightSavingsInEffect returns a BOOLEAN value. TRUE if
+          Daylight Saving Time was in effect on that date, FALSE
+          otherwise.</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+  <para>The <emphasis role="bold">IsUSDaylightSavingsInEffect</emphasis>
+  function returns TRUE if Daylight Saving Time (DST) is considered in effect
+  for the given date under U.S. Federal DST schedules (where they existed),
+  otherwise FALSE.</para>
+
+  <para>This function intentionally uses a date-only approximation: DST is
+  treated as active starting on the start-transition Sunday (inclusive) and
+  inactive starting on the end-transition Sunday (exclusive). This avoids
+  ambiguity around the local 02:00 transition time (and the midnight–02:00
+  window on the "fall back" day). If you need hour-level correctness, use a
+  timestamp + timezone rules (e.g., IANA tzdata) instead.</para>
+
+  <para><emphasis role="bold">Historical notes and
+  limitations:</emphasis></para>
+
+  <itemizedlist>
+    <listitem>
+      <para>1967+ follows the Uniform Time Act schedules (with the 1974–1975
+      exceptions and the 1987 and 2007 rule changes).</para>
+    </listitem>
+
+    <listitem>
+      <para>1942–1945 models WWII "War Time" as continuous DST (starting
+      1942-02-09, ending 1945-09-30).</para>
+    </listitem>
+
+    <listitem>
+      <para>1920–1941 and 1946–1966 return FALSE because DST was not federally
+      standardized and varied by state/locality.</para>
+    </listitem>
+
+    <listitem>
+      <para>This does NOT account for state/local exemptions (e.g., areas that
+      do not observe DST).</para>
+    </listitem>
+  </itemizedlist>
+
+  <para>Example:</para>
+
+  <programlisting format="linespecific">IMPORT STD;
+
+// Check if DST is in effect for July 4th, 2024
+SummerDate := 20240704;
+IsDSTSummer := STD.Date.IsUSDaylightSavingsInEffect(SummerDate);
+      // IsDSTSummer will be TRUE
+
+// Check if DST is in effect for December 25th, 2024  
+WinterDate := 20241225;
+IsDSTWinter := STD.Date.IsUSDaylightSavingsInEffect(WinterDate);
+      // IsDSTWinter will be FALSE
+
+// Check if DST is in effect for today's date
+IsTodayDST := STD.Date.IsUSDaylightSavingsInEffect(STD.Date.Today());
+      // IsTodayDST contains whether DST is currently in effect</programlisting>
+
+  <para/>
+</sect1>

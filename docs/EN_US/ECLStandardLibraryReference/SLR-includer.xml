@@ -441,6 +441,9 @@
     <xi:include href="ECLStandardLibraryReference/SLR-Mods/IsDateLeapYear.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
+    <xi:include href="ECLStandardLibraryReference/SLR-Mods/IsUSDaylightSavingsInEffect.xml"
+                xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
     <xi:include href="ECLStandardLibraryReference/SLR-Mods/IsValidDate.xml"
                 xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
